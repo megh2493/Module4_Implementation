@@ -43,7 +43,7 @@ WARNING!!! WARNING!!!
 	// using the 'speak' method or either helloSpeaker's or byeSpeaker's
 	// 'speak' method.
 	// See Lecture 50, part 1
-	for (var name in names) {
+	for (var i = 0; i < names.length(); i++) {
 
 		// STEP 11:
 		// Retrieve the first letter of the current name in the loop.
@@ -53,18 +53,17 @@ WARNING!!! WARNING!!!
 		// to lower case character 'j' afterwards.
 		// Look up these methods on Mozilla Developer Network web site if needed.
 		var firstLetter = name.charAt[0].toLowerCase;
-		byeSpeaker.speak(name);
 
 		// STEP 12:
 		// Compare the 'firstLetter' retrieved in STEP 11 to lower case
 		// 'j'. If the same, call byeSpeaker's 'speak' method with the current name
 		// in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
 		// name in the loop.
-		if (if firstLetter === "j") {
-				byeSpeaker.speak(name);
+		if (firstLetter === "j") {
+				byeSpeaker.speak(names[i]);
 			}
 			else {
-				helloSpeaker.speak(name);
+				helloSpeaker.speak(names[i]);
 			}
 		}
 });
